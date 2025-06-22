@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Liga Infantil Mixta</title>
+  <title>Liga Juvenil Mixta</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -63,20 +63,38 @@
       font-weight: 600;
     }
 
+    /* Primera columna verde para las tablas generales */
     tbody tr td:first-child,
     tbody tr th:first-child {
-      background-color: #4CAF50; /* Verde */
+      background-color: #4CAF50;
       color: white;
       font-weight: bold;
     }
 
-    tr:nth-child(even) td:not(:first-child),
-    tr:nth-child(even) th:not(:first-child) {
+    /* Filas pares con fondo gris claro (excepto tabla resultados) */
+    /* Excluimos tabla-resultados de este estilo */
+    table:not(.table-resultados) tr:nth-child(even) td:not(:first-child),
+    table:not(.table-resultados) tr:nth-child(even) th:not(:first-child) {
       background-color: #f9f9f9;
     }
 
+    /* Negrita para columna PTS de la tabla general */
     tbody tr td:nth-child(11) {
       font-weight: bold;
+    }
+
+    /* Tabla resultados: columnas iguales y sin fondo en filas */
+    .table-resultados th,
+    .table-resultados td {
+      width: 20%;  /* 5 columnas iguales */
+      box-sizing: border-box;
+      text-align: center;
+    }
+    /* En la tabla resultados, sólo encabezado con fondo verde */
+    .table-resultados tbody tr td {
+      background: transparent !important;
+      color: #333;
+      font-weight: normal;
     }
 
     @media screen and (max-width: 600px) {
@@ -173,9 +191,6 @@
       <tbody>
         <tr><td>1</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
         <tr><td>2</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>3</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>4</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>5</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
       </tbody>
     </table>
   </div>
@@ -197,9 +212,30 @@
       <tbody>
         <tr><td>1</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
         <tr><td>2</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>3</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>4</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
-        <tr><td>5</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>Resultados</h1>
+  <div class="table-container">
+    <table class="table-resultados">
+      <thead>
+        <tr>
+          <th>Equipo Local</th>
+          <th>Logo Local</th>
+          <th>Resultado</th>
+          <th>Logo Visitante</th>
+          <th>Equipo Visitante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tormenta</td>
+          <td><img src="https://via.placeholder.com/30" alt="Logo Tormenta"></td>
+          <td><strong>2 - 1</strong></td>
+          <td><img src="https://via.placeholder.com/30" alt="Logo Veloz Jr"></td>
+          <td>Veloz Jr</td>
+        </tr>
       </tbody>
     </table>
   </div>

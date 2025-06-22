@@ -54,7 +54,7 @@
     th, td {
       padding: 12px;
       text-align: center;
-      user-select: none; /* evita que se seleccione texto al clicar */
+      user-select: none;
     }
 
     th {
@@ -63,23 +63,35 @@
       font-weight: 600;
     }
 
-    /* Fondo azul solo para la columna "Puesto" en todas las filas */
-    tbody tr td:first-child,
-    tbody tr th:first-child {
+    /* Primera columna azul para todas las tablas excepto resultados */
+    .tabla-general tbody tr td:first-child,
+    .tabla-general thead tr th:first-child,
+    .tabla-goleo tbody tr td:first-child,
+    .tabla-goleo thead tr th:first-child,
+    .tabla-encajados tbody tr td:first-child,
+    .tabla-encajados thead tr th:first-child {
       background-color: #4a90e2;
       color: white;
       font-weight: bold;
     }
 
-    /* Filas pares con fondo gris claro */
+    /* Filas pares con fondo gris claro (excepto cabecera) */
     tr:nth-child(even) td:not(:first-child),
     tr:nth-child(even) th:not(:first-child) {
       background-color: #f9f9f9;
     }
 
-    /* Negrita para columna PTS */
-    tbody tr td:nth-child(11) {
+    /* Negrita para columna PTS de la tabla general */
+    .tabla-general tbody tr td:nth-child(11) {
       font-weight: bold;
+    }
+
+    /* Solo para la tabla de resultados */
+    .table-resultados th,
+    .table-resultados td {
+      width: 20%;  /* 5 columnas iguales */
+      box-sizing: border-box;
+      text-align: center;
     }
 
     @media screen and (max-width: 600px) {
@@ -87,12 +99,12 @@
         padding: 10px;
         font-size: 0.85rem;
       }
-
       h1 {
         font-size: 1.4rem;
       }
     }
-        .back-button {
+
+    .back-button {
       margin: 30px 0 40px;
       padding: 14px 40px;
       font-size: 1.3rem;
@@ -107,7 +119,7 @@
       box-shadow: 0 6px 12px rgba(70, 130, 220, 0.5);
       transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
       font-weight: 600;
-      width: 160px; /* ancho fijo para mejor forma */
+      width: 160px;
     }
 
     .back-button:hover {
@@ -128,7 +140,7 @@
 
   <h1>Tabla General</h1>
   <div class="table-container">
-    <table id="tablaGeneral">
+    <table id="tablaGeneral" class="tabla-general">
       <thead>
         <tr>
           <th>Puesto</th>
@@ -147,25 +159,21 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td><a href="Inequipo1.html"><img src="https://via.placeholder.com/30"  style="height:30px;"></a></td>
-          <td>Tormenta</td>
-          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
+          <td><a href="Inequipo1.html"><img src="https://via.placeholder.com/30" style="height:30px;"></a></td>
+          <td>Tormenta</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
         </tr>
         <tr>
           <td>2</td>
-          <td><a href="Inequipo2.html"><img src="https://via.placeholder.com/30"  style="height:30px;"></a></td>
-          <td>Veloz Jr</td>
-          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
+          <td><a href="Inequipo2.html"><img src="https://via.placeholder.com/30" style="height:30px;"></a></td>
+          <td>Veloz Jr</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Resto de tablas sin cambios -->
-
   <h1>Tabla de Goleo</h1>
   <div class="table-container">
-    <table>
+    <table class="tabla-goleo">
       <thead>
         <tr>
           <th>Puesto</th>
@@ -179,29 +187,10 @@
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+          <td>1</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
         </tr>
         <tr>
-          <td>2</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+          <td>2</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
         </tr>
       </tbody>
     </table>
@@ -209,7 +198,7 @@
 
   <h1>Menos Goles Encajados</h1>
   <div class="table-container">
-    <table>
+    <table class="tabla-encajados">
       <thead>
         <tr>
           <th>Puesto</th>
@@ -223,35 +212,40 @@
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+          <td>1</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
         </tr>
         <tr>
-          <td>2</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
-          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+          <td>2</td><td><img src="https://via.placeholder.com/30"></td><td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-    <a href="index.html" class="back-button">Regresar</a>
+  <h1>Resultados</h1>
+  <div class="table-container">
+    <table class="table-resultados">
+      <thead>
+        <tr>
+          <th>Equipo Local</th>
+          <th>Logo Local</th>
+          <th>Resultado</th>
+          <th>Logo Visitante</th>
+          <th>Equipo Visitante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tormenta</td>
+          <td><img src="https://via.placeholder.com/30" alt="Logo Tormenta"></td>
+          <td><strong>2 - 1</strong></td>
+          <td><img src="https://via.placeholder.com/30" alt="Logo Veloz Jr"></td>
+          <td>Veloz Jr</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="index.html" class="back-button">Regresar</a>
 
 </body>
 </html>
