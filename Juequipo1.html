@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equipo 3 - Liga Infantil Mixta</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #4CAF50; /* Verde */
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 80, 0, 0.2);
+    }
+
+    h1 {
+      margin: 30px 0 10px;
+      text-align: center;
+      color: #333;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 800px;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 80, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4CAF50; /* Verde */
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+
+    .back-button {
+      margin: 30px 0 40px;
+      padding: 14px 40px;
+      font-size: 1.3rem;
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 80, 0, 0.5);
+      transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+      width: 160px;
+    }
+
+    .back-button:hover {
+      background: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
+      box-shadow: 0 8px 20px rgba(0, 80, 0, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .back-button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(0, 60, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <header>Equipo 1</header>
+
+  <h1>Jugadores</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Nombre</th>
+          <th>Sexo</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>Entrenador</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Nombre</th>
+          <th>Sexo</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://via.placeholder.com/50" class="player-photo" /></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="Juvenil.html" class="back-button">Regresar</a>
+
+</body>
+</html>

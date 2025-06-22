@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liga Infantil Mixta</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #4a90e2;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin: 30px 0 10px;
+      text-align: center;
+      color: #333;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 1000px;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      user-select: none; /* evita que se seleccione texto al clicar */
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Fondo azul solo para la columna "Puesto" en todas las filas */
+    tbody tr td:first-child,
+    tbody tr th:first-child {
+      background-color: #4a90e2;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Filas pares con fondo gris claro */
+    tr:nth-child(even) td:not(:first-child),
+    tr:nth-child(even) th:not(:first-child) {
+      background-color: #f9f9f9;
+    }
+
+    /* Negrita para columna PTS */
+    tbody tr td:nth-child(11) {
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      th, td {
+        padding: 10px;
+        font-size: 0.85rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+        .back-button {
+      margin: 30px 0 40px;
+      padding: 14px 40px;
+      font-size: 1.3rem;
+      background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(70, 130, 220, 0.5);
+      transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+      width: 160px; /* ancho fijo para mejor forma */
+    }
+
+    .back-button:hover {
+      background: linear-gradient(135deg, #357abd 0%, #2c5d9e 100%);
+      box-shadow: 0 8px 20px rgba(50, 90, 160, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .back-button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(40, 80, 140, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <header>Liga Infantil Mixta</header>
+
+  <h1>Tabla General</h1>
+  <div class="table-container">
+    <table id="tablaGeneral">
+      <thead>
+        <tr>
+          <th>Puesto</th>
+          <th>Logo</th>
+          <th>Equipo</th>
+          <th>PJ</th>
+          <th>G</th>
+          <th>E</th>
+          <th>P</th>
+          <th>GF</th>
+          <th>GC</th>
+          <th>DIF</th>
+          <th style="font-weight:bold;">PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="Inequipo1.html"><img src="https://via.placeholder.com/30"  style="height:30px;"></a></td>
+          <td>Tormenta</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="Inequipo2.html"><img src="https://via.placeholder.com/30"  style="height:30px;"></a></td>
+          <td>Veloz Jr</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="font-weight:bold;">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Resto de tablas sin cambios -->
+
+  <h1>Tabla de Goleo</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Puesto</th>
+          <th>Foto</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Nombre</th>
+          <th>Equipo</th>
+          <th>Goles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>Menos Goles Encajados</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Puesto</th>
+          <th>Foto</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Nombre</th>
+          <th>Equipo</th>
+          <th>Goles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><img src="https://via.placeholder.com/30"  style="height:30px;"></td>
+          <td>--------</td><td>--------</td><td>--------</td><td>--------</td><td>--------</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <a href="index.html" class="back-button">Regresar</a>
+
+</body>
+</html>
