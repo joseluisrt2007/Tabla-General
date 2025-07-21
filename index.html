@@ -17,62 +17,87 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       justify-content: center;
+      padding-top: 80px; /* espacio para header */
+      box-sizing: border-box;
     }
 
-  header {
-  background: linear-gradient(135deg, #4a90e2 0%, #4CAF50 100%);
-  width: 100%;
-  padding: 30px 0;
-  text-align: center;
-  color: white;
-  font-size: 2.8rem; /* más grande */
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+    header {
+      background: linear-gradient(135deg, #4a90e2 0%, #4CAF50 100%);
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: fixed; /* fijo en top */
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
 
-h1 {
-  margin: 140px 0 20px; /* un poco más arriba */
-  text-align: center;
-  color: white;
-  font-size: 2.4rem; /* más grande */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
+    h1 {
+      margin: 40px 0 20px;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
 
+    .menu-buttons {
+      cursor: url('pointer.png'), pointer;
+      display: flex;
+      gap: 20px;
+      width: 90%;
+      max-width: 600px;
+      justify-content: center;
+      flex-wrap: wrap; /* para que en móvil se ajusten */
+    }
 
-.menu-buttons {
-  cursor: url('pointer.png'), pointer;
-  display: flex;
-  gap: 30px;
-  width: 90%;
-  max-width: 600px;
-  justify-content: center;
-}
+    .menu-button {
+      cursor: url('pointer.png'), pointer;
+      background: linear-gradient(135deg, #4a90e2 0%, #4CAF50 100%);
+      color: white;
+      border: none;
+      padding: 18px 35px;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.2s;
+      flex: 1 1 200px; /* crecen, pero mínimo 200px */
+      min-width: 150px;
+      max-width: 250px;
+      text-align: center;
+    }
 
-.menu-button {
-  cursor: url('pointer.png'), pointer;
-  background: linear-gradient(135deg, #4a90e2 0%, #4CAF50 100%);
-  color: white;
-  border: none;
-  padding: 20px 45px; /* botones más grandes */
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.6rem; /* texto más grande */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s, transform 0.2s;
-  flex: 1; /* para que crezcan y se llenen horizontalmente */
-  min-width: 180px; /* evitar que sean demasiado pequeños */
-}
+    .menu-button:hover {
+      cursor: url('pointer.png'), pointer;
+      background: linear-gradient(135deg, #357abd 0%, #388E3C 100%);
+      transform: scale(1.05);
+    }
 
-.menu-button:hover {
-  cursor: url('pointer.png'), pointer;
-  background: linear-gradient(135deg, #357abd 0%, #388E3C 100%);
-  transform: scale(1.05);
-}
+    /* Ajustes para pantallas muy pequeñas */
+    @media screen and (max-width: 400px) {
+      header {
+        font-size: 1.6rem;
+        padding: 15px 0;
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin: 30px 0 15px;
+      }
+      .menu-button {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        min-width: 100%;
+        max-width: none;
+      }
+      .menu-buttons {
+        gap: 15px;
+      }
+    }
   </style>
 </head>
 <body>
