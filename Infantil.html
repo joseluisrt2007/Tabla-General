@@ -47,19 +47,20 @@ h1 {
 
 table {
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   background-color: #fff;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
-  min-width: 600px;
+  min-width: auto; /* Ajustado para que no se recorte */
 }
 
 th, td {
   padding: 12px;
   text-align: center;
   user-select: none;
+  white-space: nowrap; /* Previene que el texto se divida en varias líneas */
 }
 
 th {
@@ -156,14 +157,15 @@ table img {
   }
 
   table {
-    min-width: 100%; /* que no fuerce ancho mínimo grande */
     width: 100%;
-    font-size: 0.8rem;
+    min-width: auto;
+    font-size: 0.75rem;
   }
 
   th, td {
-    padding: 6px 8px;
-    white-space: nowrap; /* evita que texto se rompa y permite scroll horizontal */
+    padding: 6px 5px;
+    /* Mantener nowrap para scroll horizontal, si quieres que se divida, elimina esta línea */
+    white-space: nowrap;
   }
 
   .back-button {
