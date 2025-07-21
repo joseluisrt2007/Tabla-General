@@ -6,150 +6,182 @@
   <title>Liga Juvenil Mixta</title>
   <style>
     body {
-      cursor: url('cursor.png'), auto;      
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-image: url('f2.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  cursor: url('cursor.png'), auto;      
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-image: url('f2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    header {
-      background: #4CAF50; /* Verde principal */
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0, 80, 0, 0.2);
-    }
+header {
+  background: #4CAF50; /* Verde principal */
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 80, 0, 0.2);
+}
 
-    h1 {
-      margin: 30px 0 10px;
-      text-align: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    }
+h1 {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: center;
-    }
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
 
-    table {
-      border-collapse: collapse;
-      width: 90%;
-      max-width: 1000px;
-      background-color: #fff;
-      box-shadow: 0 8px 16px rgba(0, 80, 0, 0.1);
-      border-radius: 10px;
-      overflow: hidden;
-      min-width: 600px;
-    }
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 80, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 600px;
+}
 
-    th, td {
-      padding: 12px;
-      text-align: center;
-      user-select: none;
-    }
+th, td {
+  padding: 12px;
+  text-align: center;
+  user-select: none;
+}
 
-    th {
-      background-color: #4CAF50; /* Verde */
-      color: white;
-      font-weight: 600;
-    }
+th {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  font-weight: 600;
+}
 
-    /* Primera columna verde para las tablas generales */
-    tbody tr td:first-child,
-    tbody tr th:first-child {
-      background-color: #4CAF50;
-      color: white;
-      font-weight: bold;
-    }
+/* Primera columna verde para las tablas generales */
+tbody tr td:first-child,
+tbody tr th:first-child {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
 
-    /* Filas pares con fondo gris claro (excepto tabla resultados) */
-    /* Excluimos tabla-resultados de este estilo */
-    table:not(.table-resultados) tr:nth-child(even) td:not(:first-child),
-    table:not(.table-resultados) tr:nth-child(even) th:not(:first-child) {
-      background-color: #f9f9f9;
-    }
+/* Filas pares con fondo gris claro (excepto tabla resultados) */
+/* Excluimos tabla-resultados de este estilo */
+table:not(.table-resultados) tr:nth-child(even) td:not(:first-child),
+table:not(.table-resultados) tr:nth-child(even) th:not(:first-child) {
+  background-color: #f9f9f9;
+}
 
-    /* Negrita para columna PTS de la tabla general */
-    tbody tr td:nth-child(11) {
-      font-weight: bold;
-    }
+/* Negrita para columna PTS de la tabla general */
+tbody tr td:nth-child(11) {
+  font-weight: bold;
+}
 
-    /* Tabla resultados: columnas iguales y sin fondo en filas */
-    .table-resultados th,
-    .table-resultados td {
-      width: 20%;  /* 5 columnas iguales */
-      box-sizing: border-box;
-      text-align: center;
-    }
-    /* En la tabla resultados, sólo encabezado con fondo verde */
-    .table-resultados tbody tr td {
-      background: transparent !important;
-      color: #333;
-      font-weight: normal;
-    }
+/* Tabla resultados: columnas iguales y sin fondo en filas */
+.table-resultados th,
+.table-resultados td {
+  width: 20%;  /* 5 columnas iguales */
+  box-sizing: border-box;
+  text-align: center;
+}
+/* En la tabla resultados, sólo encabezado con fondo verde */
+.table-resultados tbody tr td {
+  background: transparent !important;
+  color: #333;
+  font-weight: normal;
+}
 
-    @media screen and (max-width: 600px) {
-      th, td {
-        padding: 10px;
-        font-size: 0.85rem;
-      }
-      h1 {
-        font-size: 1.4rem;
-      }
-    }
+.back-button {
+  cursor: url('pointer.png'), pointer;
+  margin: 30px 0 40px;
+  padding: 14px 40px;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 80, 0, 0.5);
+  transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  width: 160px;
+}
 
-    .back-button {
-      cursor: url('pointer.png'), pointer;
-      margin: 30px 0 40px;
-      padding: 14px 40px;
-      font-size: 1.3rem;
-      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      box-shadow: 0 6px 12px rgba(0, 80, 0, 0.5);
-      transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
-      font-weight: 600;
-      width: 160px;
-    }
+.back-button:hover {
+  cursor: url('pointer.png'), pointer;
+  background: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
+  box-shadow: 0 8px 20px rgba(0, 80, 0, 0.7);
+  transform: translateY(-2px);
+}
 
-    .back-button:hover {
-      cursor: url('pointer.png'), pointer;
-      background: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
-      box-shadow: 0 8px 20px rgba(0, 80, 0, 0.7);
-      transform: translateY(-2px);
-    }
+.back-button:active {
+  cursor: url('pointer.png'), pointer;
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 60, 0, 0.6);
+}
 
-    .back-button:active {
-      cursor: url('pointer.png'), pointer;
-      transform: translateY(0);
-      box-shadow: 0 4px 10px rgba(0, 60, 0, 0.6);
-    }
-    table img {
-      cursor: url('pointer.png'), pointer;
-      height: 60px;
-      width: auto;
-      border-radius: 3px; /* opcional: bordes redondeados */
-      object-fit: contain; /* para que no se deformen */
-    }
+table img {
+  cursor: url('pointer.png'), pointer;
+  height: 60px;
+  width: auto;
+  border-radius: 3px; /* opcional: bordes redondeados */
+  object-fit: contain; /* para que no se deformen */
+}
+
+/* --- Ajustes para pantallas pequeñas --- */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 10px; /* espacio lateral */
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+  }
+
+  .table-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+
+  th, td {
+    padding: 8px 6px;
+    white-space: nowrap; /* evita quiebre y permite scroll horizontal */
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  table img {
+    height: 40px;
+  }
+}
+
   </style>
 </head>
 <body>

@@ -6,112 +6,143 @@
   <title>Equipo 2 - Liga Infantil Mixta</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      cursor: url('cursor.png'), auto;      
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('manchester_city.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+body {
+  cursor: url('cursor.png'), auto;      
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('manchester_city.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    header {
-      background: #4a90e2;
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+header {
+  background: #4a90e2;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    h1 {
-      margin: 30px 0 10px;
-      text-align: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    }
+h1 {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      margin: 20px 0 40px;
-      display: flex;
-      justify-content: center;
-    }
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0 40px;
+  display: flex;
+  justify-content: center;
+}
 
-    table {
-      border-collapse: collapse;
-      width: 90%;
-      max-width: 800px;
-      background-color: #fff;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-    }
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    th, td {
-      padding: 12px;
-      text-align: center;
-    }
+th, td {
+  padding: 12px;
+  text-align: center;
+}
 
-    th {
-      background-color: #4a90e2;
-      color: white;
-      font-weight: 600;
-    }
+th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+}
 
-    tr:nth-child(even) td {
-      background-color: #f9f9f9;
-    }
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
 
-    .back-button {
-      cursor: url('pointer.png'), pointer;
-      margin: 30px 0 40px;
-      padding: 14px 40px;
-      font-size: 1.3rem;
-      background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      box-shadow: 0 6px 12px rgba(70, 130, 220, 0.5);
-      transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
-      font-weight: 600;
-      width: 160px; /* ancho fijo para mejor forma */
-    }
+.back-button {
+  cursor: url('pointer.png'), pointer;
+  margin: 30px 0 40px;
+  padding: 14px 40px;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(70, 130, 220, 0.5);
+  transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  width: 160px; /* ancho fijo para mejor forma */
+}
 
-    .back-button:hover {
-      cursor: url('pointer.png'), pointer;
-      background: linear-gradient(135deg, #357abd 0%, #2c5d9e 100%);
-      box-shadow: 0 8px 20px rgba(50, 90, 160, 0.7);
-      transform: translateY(-2px);
-    }
+.back-button:hover {
+  cursor: url('pointer.png'), pointer;
+  background: linear-gradient(135deg, #357abd 0%, #2c5d9e 100%);
+  box-shadow: 0 8px 20px rgba(50, 90, 160, 0.7);
+  transform: translateY(-2px);
+}
 
-    .back-button:active {
-      cursor: url('pointer.png'), pointer;
-      transform: translateY(0);
-      box-shadow: 0 4px 10px rgba(40, 80, 140, 0.6);
-    }
-    table img {
-      height: 60px;
-      width: auto;
-      border-radius: 3px; /* opcional: bordes redondeados */
-      object-fit: contain; /* para que no se deformen */
-    }
+.back-button:active {
+  cursor: url('pointer.png'), pointer;
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(40, 80, 140, 0.6);
+}
+
+table img {
+  height: 60px;
+  width: auto;
+  border-radius: 3px; /* opcional: bordes redondeados */
+  object-fit: contain; /* para que no se deformen */
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+  }
+  .table-container {
+    margin: 20px 0 30px;
+  }
+  table {
+    width: 100%;
+    max-width: none;
+    font-size: 0.85rem;
+    min-width: auto; /* para evitar scroll horizontal innecesario */
+  }
+  th, td {
+    padding: 8px 6px;
+    white-space: nowrap; /* mantiene el texto en una línea para scroll horizontal */
+  }
+  .back-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  table img {
+    height: 40px;
+  }
+}
 </style>
 </head>
 <body>
